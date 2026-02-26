@@ -1,0 +1,7 @@
+{
+  "name": "ReWare",
+  "description": "AI-powered student thrift marketplace for affordable, sustainable fashion.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
