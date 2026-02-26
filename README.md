@@ -1,6 +1,10 @@
+<!-- =============================================== -->
+<!--                 ECOTHRIFT README               -->
+<!-- =============================================== -->
+
 <!-- Animated Header -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=32&pause=1000&color=2E8B57&center=true&vCenter=true&width=700&lines=ReWear+%F0%9F%91%95;Circular+Fashion+Intelligence;Resell+%7C+Reuse+%7C+Recycle" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=34&pause=1000&color=2E8B57&center=true&vCenter=true&width=1000&lines=EcoThrift+%F0%9F%8C%B1;AI-Powered+Circular+Fashion+Intelligence;Resell+%7C+Reuse+%7C+Recycle;Built+for+Hack+For+Green+Bharat" />
 </p>
 
 <p align="center">
@@ -9,41 +13,51 @@
 
 ---
 
-# ReWear 👕
+# 🌱 EcoThrift 👕
 
-> A circular fashion marketplace that evaluates garments for resale, predicts fair pricing, and recommends sustainable next steps.
+> An AI-powered circular fashion marketplace that evaluates garments, predicts fair resale pricing, and recommends sustainable next steps.
+
+---
+
+## 🏆 Hackathon Context
+
+EcoThrift was built for **Hack For Green Bharat**, focusing on sustainability through real-world AI applications.
+
+**Tracks:**
+- ✅ Sustainability  
+- ✅ AI / Machine Learning  
 
 ---
 
 ## 🌍 The Problem
 
-Fast fashion generates massive textile waste.  
-Most consumers lack clarity on:
+Fast fashion generates enormous textile waste.
 
-- Resellability  
-- Fair pricing  
-- Sustainable alternatives  
+Consumers lack:
+- Clear resale evaluation  
+- Fair pricing guidance  
+- Sustainability insights  
+- Trust in second-hand marketplaces  
+
+As a result, usable garments are discarded instead of reused.
 
 ---
 
-## 🎯 The Solution
+## 🎯 The Solution — EcoThrift
 
-ReWear uses computer vision + ML to:
+EcoThrift intelligently evaluates garments using AI to determine their **best next life**.
 
-- 👕 Detect garment category  
+It can:
+- 👕 Detect garment type  
 - 🧵 Identify fabric  
 - ⭐ Score condition  
-- ✅ Predict resale probability  
-- 💰 Estimate price  
-- ♻️ Suggest reuse or recycling  
+- 📊 Predict resale probability  
+- 💰 Suggest fair resale pricing  
+- ♻️ Recommend reuse or recycling  
 
 ---
 
 ## 🔄 Platform Flow
-
-<p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="500">
-</p>
 
 Upload → Analyze → Value → Decide → Sustain
 
@@ -58,21 +72,21 @@ User((User))
 Admin((Admin))
 Recycler((Recycling Partner))
 
-User --> Analyze
+User --> Upload
+Upload --> Analyze
+
 Analyze --> Category
-Analyze --> Condition
 Analyze --> Fabric
-Analyze --> Decision
+Analyze --> Condition
+Analyze --> Resellability
 
-Decision --> Resellable
-Decision --> NotResellable
+Resellability -->|Yes| Pricing
+Resellability -->|No| Sustainability
 
-Resellable --> PriceEstimation
-PriceEstimation --> Marketplace
-
-NotResellable --> Buyback
-NotResellable --> ReuseIdeas
-NotResellable --> Recycling
+Pricing --> Marketplace
+Sustainability --> Buyback
+Sustainability --> ReuseIdeas
+Sustainability --> Recycling
 
 Admin --> Marketplace
 Recycler --> Recycling
@@ -83,95 +97,208 @@ Recycler --> Recycling
 ## 🏗️ System Architecture
 
 <p align="center">
-  <img src="https://svg-banners.vercel.app/api?type=origin&text1=Image%20Upload&text2=CNN%20Feature%20Extraction&text3=Multi-Task%20Prediction&text4=Price%20Regression&text5=Decision%20Engine&width=900&height=200"/>
+  <img src="https://svg-banners.vercel.app/api?type=origin&text1=Image%20Upload&text2=AI%20Analysis&text3=Pricing%20Engine&text4=Sustainability%20Calculator&text5=Decision%20Engine&width=1000&height=200"/>
 </p>
 
-### Processing Flow
+---
+
+## 🧪 AI Pipeline
 
 1. **Image Upload**
-2. **CNN Backbone → Feature Vector**
-3. **Multi-Task Prediction**
-   - Category
-   - Fabric
-   - Condition
-   - Resellability
-4. **Price Regression**
-5. **Lifecycle Decision Engine**
-
----
-
-## 🚀 Core Features
-
-- 📷 Image-based garment evaluation  
-- 🧠 Multi-task CNN  
-- 📊 Regression-driven pricing  
-- ♻️ Sustainability recommendations  
-- 🛍️ Marketplace integration  
-- 🔍 Automated condition scoring  
-
----
-
-## 🧪 Model Pipeline
-
-### Step 1 — Image Input  
-User uploads garment image.
-
-### Step 2 — Multi-Task CNN  
-Shared backbone predicts:
-- Category  
-- Fabric  
-- Condition  
-- Resellability  
-
-### Step 3 — Price Prediction  
-Regression model estimates resale value.
-
-### Step 4 — Decision Engine  
-
-If resellable:
-→ List with suggested price  
-
-If not:
-→ Offer buyback  
-→ Suggest reuse  
-→ Recommend recycler  
+2. **AI Vision Analysis**
+3. **Garment Condition Scoring**
+4. **Resale Probability Estimation**
+5. **Dynamic Price Calculation**
+6. **Sustainability Decision Engine**
 
 ---
 
 ## 🏗️ Tech Stack
 
-**ML:** PyTorch / TensorFlow / Scikit-learn / OpenCV  
-**Backend:** FastAPI / Flask  
-**Frontend:** Streamlit (MVP) → React (Scale)  
-**Data:** DeepFashion + resale datasets  
+EcoThrift is built using a modern **full-stack TypeScript architecture**.
+
+---
+
+### 1️⃣ Frontend (Client-Side)
+
+- **Framework:** React 19  
+- **Build Tool:** Vite  
+- **Styling:** Tailwind CSS 4.0 (Dark Mode supported)  
+- **Animations:** Motion (Framer Motion)  
+- **Icons:** Lucide React  
+- **Routing:** React Router 7  
+
+---
+
+### 2️⃣ Backend (Server-Side)
+
+- **Runtime:** Node.js with `tsx`  
+- **Framework:** Express  
+- **Database:** SQLite (`better-sqlite3`)  
+
+Stores:
+- Listings  
+- Users  
+- Trust scores  
+- Sustainability metrics  
+
+---
+
+### 3️⃣ Artificial Intelligence (AI)
+
+- **Model:** Gemini 3 Flash  
+- **Provider:** :contentReference[oaicite:0]{index=0}  
+- **SDK:** `@google/genai`  
+
+Used for:
+- Garment image analysis  
+- Condition & brand understanding  
+- Pricing intelligence  
+- Sustainability grading (A/B)
+
+---
+
+### 4️⃣ Core Logic Engines
+
+- **Pricing Engine**  
+  Calculates resale price (₹50–₹900) using AI + depreciation logic.
+
+- **Trust Score Engine**  
+  Ensures consistency between seller input and AI findings.
+
+- **Sustainability Calculator**  
+  Estimates:
+  - 💧 Water saved  
+  - 🌍 CO₂ emissions prevented  
+  - ♻️ Waste diverted  
+
+---
+
+### 5️⃣ Languages & Tools
+
+- **Language:** TypeScript (full stack)  
+- **Environment:** Dotenv  
+- **Type Safety:** TSC  
+- **Package Manager:** npm  
 
 ---
 
 ## 📁 Project Structure
 
 ```
-├── data/
-├── models/
-├── notebooks/
-├── app/
-├── api/
+├── client/          # React frontend
+├── server/          # Express backend
+├── models/          # Core business logic
+├── database/        # SQLite DB
+├── scripts/         # Utilities
+├── screenshots/     # Demo & sponsor images
 └── README.md
+```
+
+---
+
+## 💻 Run EcoThrift Locally
+
+### ✅ Prerequisites
+
+- Node.js v18+
+- npm
+- Git
+
+Check:
+```bash
+node -v
+npm -v
+```
+
+---
+
+### 🚀 Step 1 — Clone Repository
+
+```bash
+git clone https://github.com/your-username/ecothrift.git
+cd ecothrift
+```
+
+---
+
+### 📦 Step 2 — Install Dependencies
+
+```bash
+npm install
+```
+
+If split folders:
+
+```bash
+cd client && npm install
+cd ../server && npm install
+```
+
+---
+
+### 🔐 Step 3 — Environment Setup
+
+Create `.env` file in `server/`:
+
+```
+GEMINI_API_KEY=your_api_key_here
+PORT=5000
+```
+
+---
+
+### 🗄️ Step 4 — Start Backend
+
+```bash
+npx tsx server/index.ts
+```
+
+Runs at:
+```
+http://localhost:5000
+```
+
+---
+
+### 🌐 Step 5 — Start Frontend
+
+```bash
+npm run dev
+```
+
+Runs at:
+```
+http://localhost:5173
 ```
 
 ---
 
 ## 🌱 Sustainability Impact
 
-- Reduce textile landfill waste  
-- Extend garment lifecycle  
-- Enable circular fashion economy  
-- Promote conscious consumption  
+- Reduced textile landfill waste  
+- Extended garment lifecycles  
+- Transparent resale pricing  
+- Conscious consumer behavior  
+
+---
+
+## 📈 Future Enhancements
+
+- Carbon footprint scoring  
+- Blockchain-based trust verification  
+- Live demand heatmaps  
+- Marketplace integrations  
 
 ---
 
 ## 🎯 Vision
 
-To build a fashion ecosystem where every garment is intelligently evaluated and redirected to its most sustainable next life.
+To create a global AI-powered fashion ecosystem  
+where every garment is intelligently evaluated  
+and redirected to its most sustainable next life.
+
+EcoThrift aims to make sustainability **practical, measurable, and accessible**.
 
 ---
 
