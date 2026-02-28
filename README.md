@@ -2,9 +2,8 @@
 <!--                 ECOTHRIFT README               -->
 <!-- =============================================== -->
 
-<!-- Animated Header -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=34&pause=1000&color=2E8B57&center=true&vCenter=true&width=1000&lines=EcoThrift+%F0%9F%8C%B1;AI-Powered+Circular+Fashion+Intelligence;Resell+%7C+Reuse+%7C+Recycle;Built+for+Hack+For+Green+Bharat" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=34&pause=1000&color=2E8B57&center=true&vCenter=true&width=1000&lines=EcoThrift+%F0%9F%8C%B1;AI-Powered+Circular+Fashion+Intelligence;Real-Time+AI+Pricing+with+Pathway;Resell+%7C+Reuse+%7C+Recycle;Built+for+Hack+For+Green+Bharat" />
 </p>
 
 <p align="center">
@@ -15,7 +14,7 @@
 
 # 🌱 EcoThrift 👕
 
-> An AI-powered circular fashion marketplace that evaluates garments, predicts fair resale pricing, and recommends sustainable next steps.
+> An AI-powered circular fashion intelligence platform that evaluates garments, predicts fair resale pricing, and recommends sustainable next steps using real-time streaming pipelines.
 
 ---
 
@@ -26,6 +25,7 @@ EcoThrift was built for **Hack For Green Bharat**, focusing on sustainability th
 **Tracks:**
 - ✅ Sustainability  
 - ✅ AI / Machine Learning  
+- ✅ Real-Time Data Processing  
 
 ---
 
@@ -45,21 +45,22 @@ As a result, usable garments are discarded instead of reused.
 
 ## 🎯 The Solution — EcoThrift
 
-EcoThrift intelligently evaluates garments using AI to determine their **best next life**.
+EcoThrift intelligently evaluates garments using AI and real-time streaming to determine their **best next life**.
 
 It can:
 - 👕 Detect garment type  
 - 🧵 Identify fabric  
 - ⭐ Score condition  
 - 📊 Predict resale probability  
-- 💰 Suggest fair resale pricing  
+- 💰 Suggest fair resale pricing (₹50–₹900 enforced)  
 - ♻️ Recommend reuse or recycling  
+- 🌍 Calculate sustainability impact  
 
 ---
 
 ## 🔄 Platform Flow
 
-Upload → Analyze → Value → Decide → Sustain
+Upload → Stream → Analyze → Value → Decide → Sustain
 
 ---
 
@@ -73,12 +74,13 @@ Admin((Admin))
 Recycler((Recycling Partner))
 
 User --> Upload
-Upload --> Analyze
+Upload --> PathwayStream
 
-Analyze --> Category
-Analyze --> Fabric
-Analyze --> Condition
-Analyze --> Resellability
+PathwayStream --> AIAnalysis
+AIAnalysis --> Category
+AIAnalysis --> Fabric
+AIAnalysis --> Condition
+AIAnalysis --> Resellability
 
 Resellability -->|Yes| Pricing
 Resellability -->|No| Sustainability
@@ -97,25 +99,53 @@ Recycler --> Recycling
 ## 🏗️ System Architecture
 
 <p align="center">
-  <img src="https://svg-banners.vercel.app/api?type=origin&text1=Image%20Upload&text2=AI%20Analysis&text3=Pricing%20Engine&text4=Sustainability%20Calculator&text5=Decision%20Engine&width=1000&height=200"/>
+  <img src="https://svg-banners.vercel.app/api?type=origin&text1=Image%20Upload&text2=Pathway%20Stream&text3=AI%20Analysis&text4=Pricing%20Engine&text5=Sustainability%20Engine&width=1000&height=200"/>
 </p>
 
 ---
 
-## 🧪 AI Pipeline
+## ⚡ Real-Time Streaming with Pathway
+
+EcoThrift integrates **Pathway** to enable real-time asynchronous garment evaluation.
+
+Pathway is used for:
+
+- Streaming incoming garment listings
+- Async AI invocation
+- Dynamic pricing computation
+- Enforcing affordability constraints (₹50–₹900)
+- Sustainability metric calculation
+- Scalable concurrent processing
+
+### Why Pathway?
+
+Instead of processing garments sequentially, EcoThrift uses a streaming architecture that:
+
+- Handles multiple uploads concurrently  
+- Processes AI results asynchronously  
+- Scales pricing logic dynamically  
+- Enables real-time sustainability scoring  
+
+This transforms EcoThrift from a static resale app into a **real-time circular intelligence system**.
+
+---
+
+## 🧪 AI + Pathway Pipeline
 
 1. **Image Upload**
-2. **AI Vision Analysis**
-3. **Garment Condition Scoring**
-4. **Resale Probability Estimation**
-5. **Dynamic Price Calculation**
-6. **Sustainability Decision Engine**
+2. **Pathway Streaming Ingestion**
+3. **Async AI Vision Analysis**
+4. **Garment Condition Scoring**
+5. **Real-Time Price Calculation**
+6. **Affordability Range Enforcement**
+7. **Sustainability Impact Estimation**
+8. **Marketplace Decision Routing**
 
 ---
 
 ## 🏗️ Tech Stack
 
-EcoThrift is built using a modern **full-stack TypeScript architecture**.
+EcoThrift is built using a modern **full-stack TypeScript architecture** integrated with real-time streaming intelligence.
 
 ---
 
@@ -147,18 +177,30 @@ Stores:
 ### 3️⃣ Artificial Intelligence (AI)
 
 - **Model:** Gemini 3 Flash  
-- **Provider:** :contentReference[oaicite:0]{index=0}  
 - **SDK:** `@google/genai`  
 
 Used for:
 - Garment image analysis  
 - Condition & brand understanding  
 - Pricing intelligence  
-- Sustainability grading (A/B)
+- Sustainability grading  
 
 ---
 
-### 4️⃣ Core Logic Engines
+### 4️⃣ Real-Time Processing Layer
+
+- **Streaming Framework:** Pathway  
+
+Used for:
+- Async transformation of listings  
+- Real-time price computation  
+- Concurrency-controlled AI invocation  
+- Dynamic sustainability metric updates  
+- Stream-based affordability enforcement  
+
+---
+
+### 5️⃣ Core Logic Engines
 
 - **Pricing Engine**  
   Calculates resale price (₹50–₹900) using AI + depreciation logic.
@@ -174,7 +216,7 @@ Used for:
 
 ---
 
-### 5️⃣ Languages & Tools
+### 6️⃣ Languages & Tools
 
 - **Language:** TypeScript (full stack)  
 - **Environment:** Dotenv  
@@ -186,90 +228,14 @@ Used for:
 ## 📁 Project Structure
 
 ```
-├── client/          # React frontend
-├── server/          # Express backend
-├── models/          # Core business logic
-├── database/        # SQLite DB
-├── scripts/         # Utilities
-├── screenshots/     # Demo & sponsor images
+├── client/                # React frontend
+├── server/                # Express backend
+├── pathway/               # Pathway streaming pipeline
+├── models/                # Core business logic
+├── database/              # SQLite DB
+├── scripts/               # Utilities
+├── screenshots/           # Demo images
 └── README.md
-```
-
----
-
-## 💻 Run EcoThrift Locally
-
-### ✅ Prerequisites
-
-- Node.js v18+
-- npm
-- Git
-
-Check:
-```bash
-node -v
-npm -v
-```
-
----
-
-### 🚀 Step 1 — Clone Repository
-
-```bash
-git clone https://github.com/your-username/ecothrift.git
-cd ecothrift
-```
-
----
-
-### 📦 Step 2 — Install Dependencies
-
-```bash
-npm install
-```
-
-If split folders:
-
-```bash
-cd client && npm install
-cd ../server && npm install
-```
-
----
-
-### 🔐 Step 3 — Environment Setup
-
-Create `.env` file in `server/`:
-
-```
-GEMINI_API_KEY=your_api_key_here
-PORT=5000
-```
-
----
-
-### 🗄️ Step 4 — Start Backend
-
-```bash
-npx tsx server/index.ts
-```
-
-Runs at:
-```
-http://localhost:5000
-```
-
----
-
-### 🌐 Step 5 — Start Frontend
-
-```bash
-npm run dev
-```
-
-Runs at:
-```
-http://localhost:5173
 ```
 
 ---
@@ -279,16 +245,8 @@ http://localhost:5173
 - Reduced textile landfill waste  
 - Extended garment lifecycles  
 - Transparent resale pricing  
-- Conscious consumer behavior  
-
----
-
-## 📈 Future Enhancements
-
-- Carbon footprint scoring  
-- Blockchain-based trust verification  
-- Live demand heatmaps  
-- Marketplace integrations  
+- Real-time sustainability scoring  
+- Data-driven circular economy model  
 
 ---
 
@@ -296,9 +254,10 @@ http://localhost:5173
 
 To create a global AI-powered fashion ecosystem  
 where every garment is intelligently evaluated  
+through real-time streaming intelligence  
 and redirected to its most sustainable next life.
 
-EcoThrift aims to make sustainability **practical, measurable, and accessible**.
+EcoThrift aims to make sustainability **intelligent, measurable, and scalable**.
 
 ---
 
